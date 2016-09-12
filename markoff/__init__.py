@@ -29,7 +29,7 @@ class Markoff(object):
                 for line in text.split('\n'):
                     self.add_vocab(line,False)
             except IOError:
-                print('\'' + self._file + '\' does not exist, creating it now.')
+                print('\'' + self._path + '\' does not exist, creating it now.')
                 f = codecs.open(self._path,'w','utf-8')
             finally:
                 f.close()
